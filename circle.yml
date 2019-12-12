@@ -6,7 +6,7 @@ jobs:
       - image: circleci/node:10.16.3
     steps:
       - checkout
-      - run: npm install -g @cypress/commit-message-install
+      - run: npm install @cypress/commit-message-install
       - run: |
           if ! $(npm bin)/has-message; then
             echo Stopping early, no commit message
