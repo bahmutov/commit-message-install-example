@@ -15,3 +15,17 @@ jobs:
             echo All good, found commit message JSON
           fi
       - run: echo "After check"
+
+  after-build:
+    docker:
+      - image: circleci/node:10.16.3
+    steps:
+      - run: Echo After build
+
+workflows:
+  big:
+    jobs:
+      - build
+      - after-build:
+          requires:
+            - build
