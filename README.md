@@ -26,3 +26,7 @@ See [circle.yml](circle.yml) which uses [CircleCI early halt feature](https://ci
         echo All good, found commit message JSON
     fi
 ```
+
+## Note
+
+When you halt a job it is considered successfully finished. Thus in a workflow, the jobs that follow will start running. If you really want to halt everything, make this utility into a command and halt _each job_.
