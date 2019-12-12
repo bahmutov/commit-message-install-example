@@ -6,11 +6,12 @@ jobs:
       - image: circleci/node:10.16.3
     steps:
       - checkout
+      - run: npm install -g @cypress/commit-message-install
       - run: |
-          if false; then
-            echo Stopping early
+          if ! $(npm bin)/has-message; then
+            echo Stopping early, no commit message
             circleci-agent step halt
           else
-            echo All good, continuing
+            echo All good, found commit message JSON
           fi
       - run: echo "After check"
