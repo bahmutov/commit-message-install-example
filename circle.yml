@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - run: |
-          if exit 1; then
+          if true; then
             echo Stopping early
             circleci-agent step halt
           else
