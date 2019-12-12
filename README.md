@@ -1,4 +1,4 @@
-# commit-message-install-example
+# commit-message-install-example [![CircleCI](https://circleci.com/gh/bahmutov/commit-message-install-example/tree/master.svg?style=svg)](https://circleci.com/gh/bahmutov/commit-message-install-example/tree/master)
 > See https://github.com/cypress-io/commit-message-install
 
 See [circle.yml](circle.yml) which uses [CircleCI early halt feature](https://circleci.com/docs/2.0/configuration-reference/#ending-a-job-from-within-a-step) to stop the job if there is no commit message JSON
