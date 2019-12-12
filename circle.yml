@@ -1,0 +1,16 @@
+version: 2.1
+jobs:
+  build:
+    working_directory: ~/app
+    docker:
+      - image: circleci/node:10.16.3
+    steps:
+      - checkout
+      - run: |
+          if 1; then
+            echo Stopping early
+            circleci-agent step halt
+          else
+            echo All good, continuing
+          fi
+      - run: echo "After check"
